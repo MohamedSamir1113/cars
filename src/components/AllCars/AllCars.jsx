@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import styles from './AllCars.module.css';
 import axios from 'axios';
 import PopularCar from '../PopularCar/PopularCar';
+import SearchBar from '../SearchBar/SearchBar';
 
 function AllCars() {
 
-    const [cars, setCars] = useState([]);
+     const [cars, setCars] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const carsPerPage = 12;
 
@@ -48,6 +49,7 @@ function AllCars() {
             </div>
 
             <div className='container text-center'>
+                <SearchBar cars={cars} setCars={setCars}/>
                 <button className={styles.btnTitle} style={{ borderRadius: '8px' }}>
                     POPULAR RENTAL DEALS
                 </button>

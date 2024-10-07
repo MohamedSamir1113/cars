@@ -10,6 +10,7 @@ import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
 import { useMediaQuery } from 'react-responsive';
 import Testomonial from '../Testomonial/Testomonial';
 import DownloadApp from '../DownloadApp/DownloadApp';
+import Footer from '../Footer/Footer';
 function Home() {
     const [showImage, setShowImage] = useState(false);
 
@@ -73,6 +74,7 @@ function Home() {
             <WhyChooseUs />
             <Testomonial/>
             <DownloadApp/>
+            <Footer/>
         </>
     )
 }

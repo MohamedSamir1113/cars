@@ -3,12 +3,12 @@ import styles from './PopularCars.module.css'
 import axios from 'axios'
 import PopularCar from '../PopularCar/PopularCar'
 import { Link } from 'react-router-dom'
+import SearchBar from '../SearchBar/SearchBar'
 function PopularCars() {
 
     const [popularCars, setPopularCars] = useState([])
     async function getPopularCars() {
         let res = await axios.get(`https://freetestapi.com/api/v1/cars?limit=4`)
-        console.log(res.data);
         setPopularCars(res.data)
     }
 
@@ -22,6 +22,7 @@ function PopularCars() {
 
     return (
         <div className='container text-center'>
+            <SearchBar setCars={(cars) => setPopularCars(cars.slice(0, 4))}/>
             <button className={`${styles.btnTitle}`} style={{ borderRadius: "8px" }}> POPULAR RENTAL DEALS </button>
             <h1 className='text-center m-4'>Most popular cars rental deals</h1>
 

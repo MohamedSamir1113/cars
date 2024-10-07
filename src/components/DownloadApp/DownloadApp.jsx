@@ -4,8 +4,8 @@ import ios from "../../assets/ios.png"
 import iPhone14 from "../../assets/iPhone-14.png"
 function DownloadApp() {
     return (
-        <div className='d-flex mt-5 justify-content-around'>
-            <div>
+        <div className='row  mt-5 m-0 justify-content-around'>
+            <div className='col-md-6'>
                 <div className='mx-5'>
                     <h1>Download Rentcars App for <span className='text-primary'>FREE </span></h1>
                     <small>For faster, easier booking and exclusive deals.</small>
@@ -23,7 +23,7 @@ function DownloadApp() {
                     </form>
                 </div>
             </div>
-            <div className='d-flex justify-content-center align-items-end'>
+            <div className='col-md-6 d-flex justify-content-evenly align-items-end'>
                 <img src={iPhone14} className={`${styles[`mobile-img`]}`} alt="" />
             </div>
 
