@@ -3,6 +3,8 @@ import carBG from "../../assets/car 2 1.png"
 import andriod from "../../assets/andriod.png"
 import ios from "../../assets/ios.png"
 import { useEffect, useState } from 'react';
+import PopularCars from '../PopularCars/PopularCars';
+import Navbar from '../Navbar/Navbar';
 function Home() {
     const [showImage, setShowImage] = useState(false);
 
@@ -11,6 +13,7 @@ function Home() {
     }, []);
     return (
         <>
+        <Navbar/>
             <header className='container-fluid pt-3'>
                 <div className='d-flex align-items-center justify-content-between'>
                     <article>
@@ -30,6 +33,7 @@ function Home() {
                     />
                 </div>
             </header>
+            <PopularCars />
         </>
     )
 }

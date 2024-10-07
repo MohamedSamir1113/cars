@@ -1,18 +1,26 @@
 //import { useState } from 'react'
-import Navbar from './components/Navbar/Navbar'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import MainLayout from './components/MainLayout/MainLayout'
 import Home from './components/Home/Home'
-import PopularCars from './components/PopularCars/PopularCars'
-import PopularCar from './components/PopularCar/PopularCar'
+import CarDetails from './components/CarDetails/CarDetails'
+import AllCars from './components/AllCars/AllCars'
 
 
 function App() {
+  let router = createBrowserRouter([
+    {
+      path: "/", element: <MainLayout />,
+      children: [
+        {index: true,element:<Home/>},
+        {path:"all-vehicles/car/:id",element:<CarDetails/>},
+        {path:"all-vehicles",element:<AllCars/>}
+      ]
+    }
+  ])
 
   return (
     <>
-      <Navbar />
-      <Home />
-      <PopularCars />
-      <PopularCar />
+      <RouterProvider router={router}/>
     </>
   )
 }
