@@ -44,11 +44,30 @@ text-align: left;
     100% {
       visibility: visible;
       opacity: 1;
-      max-width: 60%;
+      max-width: 80%;
     }
   }
   
   .img-animate {
-    animation: showImage 2s ; 
+    animation: showImage 3s ; 
   }
   
+  @media screen and (max-width:768px) {
+    @keyframes showImage {
+      0% {
+        visibility: hidden;
+        opacity: 0;
+        max-width: 20%;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+        max-width: 100%;
+      }
+    }
+    .responsiveImg
+    {
+        width: 100%;
+       
+    }
+  }
