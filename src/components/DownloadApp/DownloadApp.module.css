@@ -1,0 +1,17 @@
+.contact-us
+{
+    height: 2.3em;
+    border: 1px solid #cedcff;
+    border-radius: 15px;
+    background-color: #cedcff;
+    min-width: 200px;
+}
+.px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+.mobile-img
+{
+    max-width: 80%;
+    max-height: 80%;
+}

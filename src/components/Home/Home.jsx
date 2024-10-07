@@ -8,6 +8,8 @@ import Navbar from '../Navbar/Navbar';
 import HowItWork from '../HowItWork/HowItWork';
 import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
 import { useMediaQuery } from 'react-responsive';
+import Testomonial from '../Testomonial/Testomonial';
+import DownloadApp from '../DownloadApp/DownloadApp';
 function Home() {
     const [showImage, setShowImage] = useState(false);
 
@@ -24,7 +26,7 @@ function Home() {
                     <img
                         src={carBG}
                         alt=""
-                        className={`${showImage ? styles['img-animate'] : ''} col-md-6  ${styles.responsiveImg}`}
+                        className={`${showImage ? styles['img-animate'] : ''} col-md-6 m-0 p-0  ${styles.responsiveImg}`}
                     />
                     <div className="col-md-5 m-0 p-0">
                         <div className='w-75  mx-auto'>
@@ -69,6 +71,8 @@ function Home() {
             <PopularCars />
             <HowItWork />
             <WhyChooseUs />
+            <Testomonial/>
+            <DownloadApp/>
         </>
     )
 }

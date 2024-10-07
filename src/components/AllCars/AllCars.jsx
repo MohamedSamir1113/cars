@@ -11,7 +11,7 @@ function AllCars() {
     const carsPerPage = 12;
 
     async function getCars() {
-        let res = await axios.get(`https://freetestapi.com/api/v1/cars?limit=48`)
+        let res = await axios.get(`https://freetestapi.com/api/v1/cars?limit=30`)
         setCars(res.data);
 
     }
@@ -31,7 +31,7 @@ function AllCars() {
     const indexOfLastCar = currentPage * carsPerPage;
     const indexOfFirstCar = indexOfLastCar - carsPerPage;
     const currentCars = cars.slice(indexOfFirstCar, indexOfLastCar);
-
+    
     // Handler for page change
     const handlePageChange = (newPage) => {
         if (newPage >= 1 && newPage <= totalPages) {
@@ -53,9 +53,9 @@ function AllCars() {
                 </button>
                 <h1 className='text-center m-4'>Most popular car rental deals</h1>
 
-                
+
                 <div className="row justify-content-center p-0 m-0 g-3">
-                    {currentCars.map((car) => (<PopularCar key={car.id} linkPath={"car"} popularCar={car}/>
+                    {currentCars.map((car) => (<PopularCar key={car.id} linkPath={"car"} popularCar={car} />
                     ))}
                 </div>
 
