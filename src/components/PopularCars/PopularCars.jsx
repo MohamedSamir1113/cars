@@ -31,9 +31,13 @@ function PopularCars() {
                 }
             </div>
 
-            <Link to="all-vehicles">
-                <button className='my-3 w-25 btn btn-outline-secondary'>show all vehicles <i className='fa-solid fa-arrow-right'></i></button>
-            </Link>
+            <div className='mt-5'>
+                <Link to="all-vehicles">
+                    <button className='my-3  w-md-25 btn btn-outline-secondary'>
+                        Show all vehicles <i className='fa-solid fa-arrow-right'></i>
+                    </button>
+                </Link>
+            </div>
         </div>
     )
 }

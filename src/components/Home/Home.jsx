@@ -5,6 +5,8 @@ import ios from "../../assets/ios.png"
 import { useEffect, useState } from 'react';
 import PopularCars from '../PopularCars/PopularCars';
 import Navbar from '../Navbar/Navbar';
+import HowItWork from '../HowItWork/HowItWork';
+import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
 function Home() {
     const [showImage, setShowImage] = useState(false);
 
@@ -34,6 +36,8 @@ function Home() {
                 </div>
             </header>
             <PopularCars />
+            <HowItWork/>
+            <WhyChooseUs/>
         </>
     )
 }

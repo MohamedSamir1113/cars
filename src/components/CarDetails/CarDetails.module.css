@@ -14,7 +14,10 @@
   .img-animate {
     animation: showImage 2s ; 
   }
-
+.responsiveImg
+{
+  width: auto;
+}
   a
   {
     color: blue !important;
@@ -41,4 +44,10 @@ font-weight: 500;
 line-height: 49.4px;
 text-align: left;
 
+}
+@media screen and (max-width:768px) {
+  .responsiveImg
+  {
+      width: 100%;
+  }
 }

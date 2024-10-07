@@ -38,7 +38,7 @@ function CarDetails() {
             </div>
             <div className="row my-5 py-5">
                 <div className="d-flex align-items-center col-lg-6">
-                    <img src={audi} className={showImage ? styles['img-animate'] : ''} alt="" />
+                    <img src={audi} className={`${showImage ? styles['img-animate'] : ''} ${styles.responsiveImg}`} alt="" />
                 </div>
 
                 <div className="col-md-6">
