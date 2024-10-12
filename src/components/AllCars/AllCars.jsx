@@ -12,8 +12,8 @@ function AllCars() {
     const carsPerPage = 12;
 
     async function getCars() {
-        let res = await axios.get(`https://freetestapi.com/api/v1/cars?limit=30`)
-        setCars(res.data);
+        let res = await axios.get(`https://myfakeapi.com/api/cars`)
+        setCars(res.data.cars.slice(0,30));
 
     }
     useEffect(() => {

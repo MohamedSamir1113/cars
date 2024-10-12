@@ -8,8 +8,8 @@ function PopularCars() {
 
     const [popularCars, setPopularCars] = useState([])
     async function getPopularCars() {
-        let res = await axios.get(`https://freetestapi.com/api/v1/cars?limit=4`)
-        setPopularCars(res.data)
+        let res = await axios.get(`https://myfakeapi.com/api/cars?limit=4`)
+        setPopularCars(res.data.cars.slice(0, 4))
     }
 
     useEffect(function () {

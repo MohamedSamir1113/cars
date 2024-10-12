@@ -6,13 +6,13 @@ import car3 from "../../assets/car3.png"
 import Frame from "../../assets/Frame.png"
 import { Link } from 'react-router-dom'
 function PopularCar({ popularCar ,linkPath}) {
-    let { id, model,make, price, year, transmission } = popularCar
+    let { id, car_model,car, price, car_model_year, availability } = popularCar
     return (
 
         <div className='col-md-3'>
             <div className={`card ${styles.shadow} p-1`}>
-                <img src={model == "Corolla" ? car1 : car3} className='w-75' alt="" />
-                <h5 className="mt-3 text-start">{make} {model}</h5>
+                <img src={car_model == "Corolla" ? car1 : car3} className='w-75' alt="" />
+                <h5 className="mt-3 text-start">{car} {car_model}</h5>
 
                 <div className="d-flex pb-2 align-items-center">
                     <i className="fa-solid fa-star me-2 text-warning"></i>
@@ -26,7 +26,7 @@ function PopularCar({ popularCar ,linkPath}) {
                         <small className='text-muted p-0 m-0'>2 Passengers</small>
                     </div>
 
-                    <div className='d-flex me-5'>
+                    <div className='d-flex me-3'>
                         <i className="fa-solid text-muted fs-5 fa-snowflake me-1"></i>
                         <small className='text-muted p-0 m-0'>Air Conditioning</small>
                     </div>
@@ -35,12 +35,12 @@ function PopularCar({ popularCar ,linkPath}) {
                 <div className='d-flex justify-content-between mt-3'>
                     <div className='d-flex'>
                         <i className="fa-solid fa-calendar-days text-black me-1 fs-5"></i>
-                        <small className='text-muted p-0 m-0'>{year}</small>
+                        <small className='text-muted p-0 m-0'>{car_model_year}</small>
                     </div>
 
                     <div className='d-flex me-5'>
                         <img src={Frame} alt="" />
-                        <small className='text-muted p-0 m-0'>{transmission}</small>
+                        <small className='text-muted p-0 m-0'>{availability?"Available":"Out Of Stock"}</small>
                     </div>
                 </div>
 

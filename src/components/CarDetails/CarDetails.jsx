@@ -8,14 +8,14 @@ import axios from 'axios';
 
 function CarDetails() {
     const [showImage, setShowImage] = useState(false);
-    const [car, setCar] = useState({});
+    const [carDetails, setCar] = useState({});
 
     const { id } = useParams();
 
     async function getCar(id) {
-        let res = await axios.get(`https://freetestapi.com/api/v1/cars/${id}`)
-        console.log(res.data);
-        setCar(res.data);
+        let res = await axios.get(`https://myfakeapi.com/api/cars/${id}`)
+        console.log(res.data.Car);
+        setCar(res.data.Car);
     }
 
 
@@ -29,12 +29,12 @@ function CarDetails() {
         }
     }, [id])
 
-    let { make, model, transmission } = car
+    let { car, car_model, availability } = carDetails
 
     return (
         <div className='container-fluid'>
             <div className='p-4'>
-                <div className='ps-3 pt-3 fs-6'><Link to="/"> Home</Link>/<Link to="/all-vehicles"> Cars</Link>/ Car details / {make} {model}</div>
+                <div className='ps-3 pt-3 fs-6'><Link to="/"> Home</Link>/<Link to="/all-vehicles"> Cars</Link>/ Car details / {car} {car_model}</div>
             </div>
             <div className="row my-5 py-5">
                 <div className="d-flex align-items-center col-lg-6">
@@ -57,7 +57,7 @@ function CarDetails() {
 
                     <div className='d-flex me-5 mb-3'>
                         <img src={Frame} alt="" />
-                        <small className='text-muted p-0 m-0'>{transmission}</small>
+                        <small className='text-muted p-0 m-0'>{availability?"Available":"Out Of Stock"}</small>
                     </div>
                     <div className='d-flex me-5'>
                         <img src={door} alt="" />
